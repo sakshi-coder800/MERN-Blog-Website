@@ -42,7 +42,7 @@ export default function BlogCard({
   return (
     <Card
       sx={{
-        width: "40%",
+        width: "60%",
         margin: "auto",
         mt: 2,
         padding: 2,
@@ -60,16 +60,45 @@ export default function BlogCard({
       )}
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">{username}</Avatar>
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">{username}  </Avatar>
         }
         title={username}
         subheader={time}
       />
-      <CardMedia component="img" height="194" image={image} alt="Paella dish" />
+     <Box style={{
+      // display :{
+        // xl:"flex",sm:"block"
+      // }
+      
+     }} 
+     
+     
+    //  sx={{
+    //  display:"block"
+    //   }
+    // } md ={{display:"flex"}}
+    id="Box1" 
+    
+    
+    >
+
+
+     <CardMedia component="img" 
+    //  height="194"
+      style={{  objectFit:"contain",
+
+  marginRight: "20px",
+  borderRadius:"10px",
+  background: "#1976d2",
+  padding: "3px",
+  height: "200px", width:"200px"
+
+      }} image={image} alt="Paella dish" />
       <CardContent>
-        <Typography variant="h6" color="text.secondary">Title : {title}</Typography>
+        <Typography variant="h6" style={{color:"#000",marginBottom:"10px"}} color="text.secondary">Title : {title}</Typography>
         <Typography variant="body2" color="text.secondary">Description : {description}</Typography>
       </CardContent>
+     </Box>
     </Card>
   );
 }
